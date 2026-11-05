@@ -165,29 +165,21 @@ The portfolio uses the 7 category groupings:
 `https://piyushvisuals.vercel.app`
 
 ### Deployment Steps:
-1. **Initialize Git & Commit** (if not already committed):
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: complete production portfolio for Piyush Visuals"
-   ```
-2. **Push to GitHub**:
-   - Create a repository on [GitHub](https://github.com/) named `piyush-visuals`.
-   - Push your code:
-     ```bash
-     git remote add origin https://github.com/<your-username>/piyush-visuals.git
-     git branch -M main
-     git push -u origin main
-     ```
-3. **Import to Vercel**:
-   - Log into [Vercel](https://vercel.com).
-   - Click **"Add New Project"** and select the `piyush-visuals` repository.
-   - Framework Preset: **Next.js**
-   - Root Directory: `./`
-   - Build Command: `npm run build`
-   - Output Directory: `.next`
-   - Domain Settings: In project settings > Domains, configure `piyushvisuals.vercel.app`.
-4. Click **Deploy**.
+1. **GitHub Repository**:
+   - The repository is already committed and pushed to:
+     [https://github.com/piyush805829/-PIYUSH-VISUALS](https://github.com/piyush805829/-PIYUSH-VISUALS)
+
+2. **Connect to Vercel (1-Click Deployment)**:
+   - Visit [https://vercel.com/new](https://vercel.com/new).
+   - Under **"Import Git Repository"**, select **`piyush805829/-PIYUSH-VISUALS`**.
+   - Vercel automatically detects the framework as **Next.js**.
+   - Keep default build settings (`npm run build`, output `.next`).
+   - Click **Deploy**.
+
+3. **Configure Custom Domain**:
+   - Once deployment completes, navigate to **Project Settings > Domains**.
+   - Add: `piyushvisuals.vercel.app` (or your custom domain).
+   - Vercel automatically issues an SSL certificate.
 
 > **Note on Video Hosting:** The website uses lightweight web previews (~400KB–1MB each) and the 1.6MB intro video directly from `public/videos/`. This fits comfortably within Vercel's static asset limits. If you add 4K feature-length original files (>100MB each), host the full video files on Cloudflare R2, AWS S3, or Vimeo/YouTube unlisted, and update `fullVideo` in `data/projects.ts`.
 
